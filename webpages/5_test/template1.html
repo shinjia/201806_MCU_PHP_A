@@ -1,0 +1,80 @@
+<?php
+$code = isset($_GET['code']) ? $_GET['code'] : 'home';
+
+switch($code)
+{
+  case 'a':
+    $web_banner = 'banner_a.jpg';
+    $web_content = file_get_contents('data/part1.html');
+    $web_extra = '';
+    break;
+
+  case 'b':
+    $web_banner = 'banner_b.jpg';
+    $web_content = '';
+    $web_extra = '';
+    break;
+
+  case 'c':
+    $web_banner = '';
+    $web_content = '';
+    $web_extra = '';
+    break;
+
+  case 'd':
+    $web_banner = '';
+    $web_content = '';
+    $web_extra = '';
+    break;
+}
+
+
+
+$html = <<< HEREDOC
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Web Pages Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+  
+  <div id="header">
+    <img src="{$web_banner}">
+  </div>
+  
+  <div id="wrapper">
+    <div id="content">
+{$web_content}
+    </div>
+  </div>
+  
+  <div id="navigation">
+      <ul>
+         <li><a href="#">墾丁國家公園</a></li>
+         <li><a href="#">玉山國家公園</a></li>
+         <li><a href="#">陽明山國家公園</a></li>
+         <li><a href="#">太魯閣國家公園</a></li>
+         <li><a href="#">雪霸國家公園</a></li>
+         <li><a href="#">金門國家公園</a></li>
+      </ul>
+  </div>
+  
+  <div id="extra">
+{$web_extra}
+  </div>
+  
+  <div id="footer">
+    <p>版權沒有．歡迎拷貝</p>
+  </div>
+  
+</div>
+</body>
+</html>
+HEREDOC;
+
+echo $html;
+?>
