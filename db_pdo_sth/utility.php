@@ -5,7 +5,8 @@ function error_message($type='', $ext='')
    $a_msg = array(
      'add_save'    => '無法新增資料 (add_save)',
      'display'     => '無法列出資料 (display)',
-     'list_all'    => '無法列出資料 (list_all)',
+     'list_all'    => '無法列出資料 (list_all)',     
+     'find_x'      => '無法查詢資料 (find_x)',
      'list_page'   => '無法列出資料 (list_page)',
      'list_page_1' => '無法列出資料 (list_page_1)',
      'list_page_2' => '無法列出資料 (list_page_2)',

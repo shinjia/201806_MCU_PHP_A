@@ -17,6 +17,6 @@ else
    $html = error_message('page', $code);
 }
 
-include 'pagemake.php';
+include 'pagemake__1.php';
 pagemake($html, '');
 ?>

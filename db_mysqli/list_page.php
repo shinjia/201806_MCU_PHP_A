@@ -3,6 +3,7 @@
 include 'config.php';
 
 $page = isset($_GET['page']) ? $_GET['page'] : 1;   // 目前的頁碼
+// $numpp = isset($_GET['numpp']) ? $_GET['numpp'] : 20;   // 目前的頁碼
 
 
 $numpp = 20; // 每頁的筆數
@@ -30,9 +31,9 @@ $tmp_start = ($page-1) * $numpp;  // 從第幾筆記錄開始抓取資料
 
 $sqlstr = "SELECT * FROM person ";
 $sqlstr .= " LIMIT " . $tmp_start . "," . $numpp;
+echo $sqlstr;
 
 $result = mysqli_query($link, $sqlstr);
-
 
 $data = '';
 while($row=mysqli_fetch_array($result))

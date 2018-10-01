@@ -14,8 +14,9 @@ $html = <<< HEREDOC
    <tr><th>備註</th><td><input type="text" name="remark"   value=''></td></tr>
 </table>
 <p><input type="submit" value="新增"></p>
-</form>
+</form>  
 HEREDOC;
+
 
 include 'pagemake.php';
 pagemake($html, '');
